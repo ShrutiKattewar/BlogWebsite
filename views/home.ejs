@@ -1,20 +1,19 @@
 
 <%- include("partials/header"); -%>
 
-    <h1>Home</h1>
-    <p> <%= startingContent %> </p>
 
+    <p class="homecontent"> <%= startingContent %> </p>
+
+<img class="center" src="https://www.netscribes.com/wp-content/uploads/2019/06/Technology-Watch.jpg" alt="">
 
   <%  posts.forEach(function(post){ %>
 
-    <h1><%=post.title%></h1>
-    <p>
-    <%=post.content.substring(0, 100) + " ..."%>
+    <h2><%=post.title%></h2>
+    <p class="homeP">
+    <%=post.content.substring(0, 350) + " ..."%>
     <a href="/posts/<%=post._id%>">Read More</a>
     </p>
 
-
     <% }) %>
-
 
 <%- include("partials/footer"); -%>
